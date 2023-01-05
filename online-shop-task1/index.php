@@ -180,7 +180,7 @@ $products = $productDetails;
                         </div>
 
                         <div class="text-center py-4">
-                            <a class="h6 text-decoration-none text-truncate" href="">
+                            <a class="h6 text-decoration-none text-truncate" href="product.php?product_id=<?= $product['id'] ?>">
                                 <?= $product['name'] ?>
                             </a>
                             <div class="d-flex align-items-center justify-content-center mt-2">
@@ -189,7 +189,7 @@ $products = $productDetails;
                             </div>
                             
                             <div class="d-flex align-items-center justify-content-center mb-1">
-                            <?php $getStar ($product['rating']) ?>
+                            <?php $getStar($product['rating']) ?>
                                 <small><?=$product['rating_count']?></small>
                                 
                             
@@ -258,22 +258,18 @@ $products = $productDetails;
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <a class="h6 text-decoration-none text-truncate" href=""><?= $product['name'] ?></a>
+                            <a class="h6 text-decoration-none text-truncate" href="product.php?product_id=<?= $product['id'] ?>"><?= $product['name'] ?></a>
                             <div class="d-flex align-items-center justify-content-center mt-2">
                                 <h5><?= $discount = $product['price'] - $product['price'] * $product['discount'] ?></h5>
                                 <h6 class="text-muted ml-2"><del>$<?= $product['price'] ?></del></h6>
                             </div>
                             <div class="d-flex align-items-center justify-content-center mb-1">
-                            <?php $getStar ($product['rating']) ?>
+                            <?php $getStar($product['rating']) ?>
                                 <small><?=$product['rating_count']?></small>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
 
                 <?php
             }
