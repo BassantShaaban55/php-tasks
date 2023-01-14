@@ -54,7 +54,7 @@ require_once('./layouts/header.php');
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px">
                                     <div class="input-group-btn">
-                                        <form action="/online-shop/logic/decreaseProductQuantity.php" method="get">
+                                        <form action="/online-shop/logic/decreaseProductQuantity.php" method="post">
                                             <input type="hidden" name="product_id" type="submit"
                                                 value="<?= $p['product']['id'] + 1 ?>" />
                                             <button class="btn btn-sm btn-primary btn-minus">
@@ -67,7 +67,7 @@ require_once('./layouts/header.php');
                                         value=" <?= $p['quantity'] ?>" />
                                     <div class="input-group-btn">
 
-                                        <form action="/online-shop/logic/increaseProductQuantity.php" method="get">
+                                        <form action="/online-shop/logic/increaseProductQuantity.php" method="post">
                                             <input type="hidden" name="product_id" value="<?= $p['product']['id'] - 1 ?>" />
                                             <button class=" btn btn-sm btn-primary btn-plus">
                                                 <i class="fa fa-plus"></i>
@@ -80,7 +80,7 @@ require_once('./layouts/header.php');
                                 <?= $p['quantity'] * $p['product']['price'] ?>
                             </td>
                             <td class="align-middle">
-                                <form action="/online-shop/logic/deleteProductFromCart.php" method="get">
+                                <form action="/online-shop/logic/deleteProductFromCart.php" method="post">
                                     <input type="hidden" name="product_id" value="<?= $p['product']['id'] ?>" />
                                     <button class="btn btn-sm btn-danger">
                                         <i class="fa fa-times"></i>
